@@ -1,0 +1,161 @@
+@charset "utf-8";
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	list-style: none;
+	/*禁止复制粘贴*/
+	/*-moz-user-select: none;
+	-webkit-user-select: none;*/
+}
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block;
+}
+body {
+	line-height: 1;
+	font-family: "微软雅黑", "微软雅黑 Regular";
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+img {
+	-webkit-touch-callout: none;
+}
+a {
+	outline: none;
+	text-decoration: none;
+}
+a:active,
+a:hover,
+a:focus {
+	border: none;
+	outline: none;
+}
+*:focus {
+	outline: 0;
+}
+@media screen and (max-width: 321px) {
+	html,
+	body {
+		font-size: 10px;
+	}
+}
+@media screen and (min-width: 321px) and (max-width: 375px) {
+	html,
+	body {
+		font-size: 11px
+	}
+}
+@media screen and (min-width: 376px) and (max-width: 414px) {
+	html,
+	body {
+		font-size: 12px
+	}
+}
+@media screen and (min-width: 415px) and (max-width: 639px) {
+	html,
+	body {
+		font-size: 14px
+	}
+}
+@media screen and (min-width: 640px) {
+	html,
+	body {
+		font: 12px/1.5 "微软雅黑", tahoma, arial, 'Hiragino Sans GB', '\5b8b\4f53', sans-serif;
+	}
+}
+#cnzz_stat_icon_1261305827 {
+	display: none;
+}

@@ -1,0 +1,214 @@
+function showwx(){
+      	if(isWeiXin()){
+		//alert("微信浏览器");
+		document.getElementById('zzc').style.display = 'block';
+		document.getElementById('ts').style.display = 'block';
+	}
+}
+
+function loadData(){
+    var name = 'jvv';//urlPara("name=");
+	if(name!=''){
+		var app = appData[name];
+		if(app!=null){
+			var cn_name  = app['cn_name'];
+			var lan      = app['lan'];
+			var icn      = app['icn'];
+			var title    = app['title'];
+			var desc     = app['desc'];
+			var images   = app['images'];
+			var android  = app['android'];
+			var ios      = app['ios'];
+			var androidTag,iosTag=null;
+			//setInnerHtml('cn_name',cn_name);
+			//setInnerHtml('a_title',title);
+			//setInnerHtml('lan','语言：'+lan);
+			
+			//if(desc.length>0){
+			//	var a_desc = getById('a_desc');
+			//	for(var i=0;i<desc.length;i++){
+			//		var desc_li = document.createElement("li");
+			//		var textNode = document.createTextNode(desc[i]);
+			//		desc_li.appendChild(textNode);
+			//		a_desc.appendChild(desc_li);
+			//	}				
+			//}
+			//if(images.length>0){
+			//	var slider_imgs = getById('slider_imgs');
+			//	for(var i=0;i<images.length;i++){
+			//		var imgDiv = document.createElement("div");
+			//		//test
+			//		imgDiv.className="swiper-slide";
+			//		var img = document.createElement("img");
+			//		img.setAttribute("src",images[i]);
+			//		img.setAttribute("title",cn_name);
+					
+			//		var borderDiv = document.createElement("div");
+			//		borderDiv.className='imgborder';
+			//		borderDiv.appendChild(img);
+			//		imgDiv.appendChild(borderDiv);
+			//		slider_imgs.appendChild(imgDiv);
+			//	}				
+			//}
+			
+			//var iconTag = getById('icon').src=icn;
+			//if(iconTag!=null){
+			//	iconTag.src=icn;
+			//	iconTag.alt=cn_name;
+			//	iconTag.title=cn_name;
+			//}
+			//var downloadArea = getById('downloadArea');
+			//if (ios!=null&&((browser.versions.iPhone||browser.versions.iPad||browser.versions.iPod)||android==null))
+			//{                 
+			//	//显示ios
+			//	var d = createDowloadTag(ios,'ios',cn_name);
+			//	downloadArea.appendChild(d);
+			
+			//}else if(android!=null&&(browser.versions.android||ios==null)){
+			//	var d = createDowloadTag(android,'android',cn_name);
+			//	downloadArea.appendChild(d);
+			//}else{
+			//	//都显示
+			//	var d1 = createDowloadTag(android,'android',cn_name,true);
+			//	var d2 = createDowloadTag(ios,'ios',cn_name);
+			//	downloadArea.appendChild(d1);
+			//	downloadArea.appendChild(d2);
+			//}
+			
+			//var elem = document.getElementById('slider');
+			//window.mySwipe = Swipe(elem, {});
+			
+			 
+			  var mySwiper = new Swiper('.swiper-container',{
+				pagination: '.pagination',
+				paginationClickable: true,
+				slidesPerView: 'auto'
+			  })
+			  
+		}	
+	} 
+}
+function createDowloadTag(osObj,type,name,both){
+	var version=osObj['version'],
+		update_date=osObj['update_date'],
+		size=osObj['size'],
+		require=osObj['required'],
+		downloadUrl=osObj['download_url'];
+		var parent = document.createElement("div");
+	if(both){
+		parent.className="down clearfix bdb";
+	}else{
+		parent.className="down clearfix";
+	}
+	
+	
+	var son1 = document.createElement("div");
+	son1.className="fl left-text";
+
+	var sonP1 = document.createElement("p");
+	var sonP2 = document.createElement("p");
+	var sonP3 = document.createElement("p");
+	var son3 = document.createElement("span");
+	
+	var son22 = document.createElement("p");
+	var son33 = document.createElement("span");
+
+	var textNodeVersion = document.createTextNode('版本号：'+version);
+	var textNodeSize = document.createTextNode('大小：'+size);
+	
+	
+	var textNodeSys = document.createTextNode('系统：'+require);
+	var textNodeUpdateDate = document.createTextNode('更新时间：'+update_date);
+	
+	son3.appendChild(textNodeVersion);
+	sonP1.appendChild(son3);
+	sonP1.appendChild(textNodeSize);
+	
+	sonP2.appendChild(textNodeSys);
+	sonP3.appendChild(textNodeUpdateDate);
+	
+	//son33.appendChild(textNodeSize);
+	//son22.appendChild(son33);
+	
+	
+	son1.appendChild(sonP1);
+	son1.appendChild(sonP2);
+	son1.appendChild(sonP3);
+	//son1.appendChild(son22);
+	
+	parent.appendChild(son1);
+	
+	var divBtn = document.createElement("div");
+	if(type=='ios'){
+		divBtn.className="do app fr";
+	}else{
+		divBtn.className="do Android fr";	
+	}
+	
+	var aBtn = document.createElement("a");
+	if(isWeiXin()==true){
+		downloadUrl="javascript:;";
+	}
+	aBtn.setAttribute("href",downloadUrl);
+	aBtn.setAttribute("alt",name);
+	aBtn.setAttribute("title",name);
+	aBtn.setAttribute("otitle",'webapp-下载页-'+name+'-'+type);
+	aBtn.setAttribute("otype","button");
+	aBtn.addEventListener("touchend", function(){
+		showwx();
+	}, false);
+	
+	var textNodeBtn = null;
+	if(type=='ios'){
+		textNodeBtn = document.createTextNode('App Store下载');
+	}else{
+		textNodeBtn = document.createTextNode('Android下载');
+	}
+	aBtn.appendChild(textNodeBtn);
+	
+	divBtn.appendChild(aBtn)
+	parent.appendChild(divBtn);
+	return parent;
+}
+
+function getById(tagId){
+	return document.getElementById(tagId);
+}
+function setInnerHtml(tagId,htmlStr){
+	var tagObj = getById(tagId);
+	if(tagObj!=null){
+		tagObj.innerHTML=htmlStr;	
+	}
+}
+/*get url addr parm*/
+function urlPara (v){
+	var url = window.location.search;
+	if (url.indexOf(v) != -1){
+		var start = url.indexOf(v)+v.length;
+		var end = url.indexOf('&',start) == -1 ? url.length : url.indexOf('&',start);
+	   	return url.substring(start,end);
+	} else { return '';}
+}
+var browser = {
+	versions: function() {
+		var u = navigator.userAgent,
+		app = navigator.appVersion;
+		return {
+			android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1,
+			iPhone: u.indexOf('iPhone') > -1 ,
+			iPad: u.indexOf('iPad') > -1,
+			iPod: u.indexOf('iPod') > -1,
+		};
+	} (),
+	language: (navigator.browserLanguage || navigator.language).toLowerCase()
+};
+/*judge weixin browser*/
+function isWeiXin(){ 
+	var ua = window.navigator.userAgent.toLowerCase(); 
+	if(ua.match(/MicroMessenger/i) == 'micromessenger')
+	{
+		return true; 
+	}else{ 
+		return false; 
+	} 
+}

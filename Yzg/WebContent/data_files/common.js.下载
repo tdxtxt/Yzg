@@ -1,0 +1,40 @@
+var isanimate = true;
+$(window).scroll(function() {
+	if (isanimate) {
+		smaoothan(".p12", "roateLeftIn");
+		smaoothan(".sixitems", "animate");
+		smaoothan(".p1 .w-500", "animate");
+		smaoothan(".p2 .w-500", "animate");
+		smaoothan(".p3 .w-500", "animate");
+		smaoothan(".p4 .w-500", "animate");
+		smaoothan(".p5 .w-500", "animate");
+		smaoothan(".p6 .w-500", "animate");
+		smaoothan(".p29", "animate");
+		smaoothan(".p2 .rect-430410", "animate");
+		smaoothan(".p3 .rect-430410", "animate");
+		smaoothan(".p4 .rect-430410", "animate");
+		smaoothan(".p5 .rect-450430", "animate");
+		smaoothan(".earth", "animate");
+	}
+});
+$(".sixitems li").click(function() {
+	isanimate = false;
+	var index = $(this).index();
+	var scrolltop = index * 610 + 1000 + (610) / 2;
+	$("html,body").animate({
+		scrollTop: scrolltop + "px"
+	}, 1000, "swing", function() {
+		isanimate = true;
+	});
+});
+window.onload = function() {
+	smaoothan(".p12", "roateLeftIn");
+	smaoothan(".sixitems", "animate");
+}
+
+function smaoothan(eml, clas) {
+	var a = $(eml).offset().top;
+	if ((a + 80) >= $(window).scrollTop() && (a + 80) < ($(window).scrollTop() + $(window).height())) {
+		$(eml).addClass(clas);
+	}
+}

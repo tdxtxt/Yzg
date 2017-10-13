@@ -1,0 +1,663 @@
+@charset "utf-8";
+html,
+body {
+	background: #f6f5f3;
+}
+.header-desc{
+	position: fixed;
+	left: 0;
+	top: 0;
+	margin-top: 40px;
+	width: 100%;
+	height: 150px;
+	color: #333;
+	letter-spacing: 10px;
+	text-align: center;
+	font-size: 32px;
+	font-weight: bold;
+}
+.page,
+.contain {
+	position: relative;
+	width: 1000px;
+	margin: auto;
+}
+.header {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 90px;
+	background: #f6f5f3;
+	z-index: 2222;
+}
+.contain {
+	margin-top: 10px;
+}
+.logo-items {
+	position: relative;
+	height: 70px;
+	overflow: hidden;
+	float: left;
+}
+.logo-items .logo {
+	height: 100%;
+	display: block;
+	float: left;
+}
+.logo-items .logotext {
+	height: 80%;
+	display: block;
+	float: left;
+	margin-top: 7px;
+}
+.nav {
+	position: relative;
+	float: right;
+	overflow: hidden;
+	height: 54px;
+	margin-top: 8px;
+}
+.nav li {
+	position: relative;
+	float: left;
+	width: 160px;
+	height: 100%;
+}
+.nav li a {
+	width: 5em;
+	text-align: center;
+	color: #797572;
+	display: block;
+	font-size: 22px;
+	line-height: 32px;
+	border-bottom: 2px solid #f6f5f3;
+	margin: auto;
+	margin-top: 11px;
+}
+.nav li:hover a,
+.nav li.active a {
+	font-weight: bold;
+	border-bottom: 2px solid #e9c62c;
+	color: #000;
+	transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+}
+.nav li:first-child a {
+	width: 2.5em;
+}
+.download-items {
+	position: relative;
+	margin-top: 90px;
+	overflow: hidden;
+}
+.pc-bg1 {
+	display: block;
+	height: 769px;
+	width: 100%;
+}
+.pos-ab {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+.downright-items {
+	
+    position: absolute;
+    right: 5%;
+    top: 22%;
+   	*width: 434px;
+    *height: 186px;
+    *margin-top: 140px;
+}
+.descript,
+.download-buttonItems {
+	position: relative;
+	overflow: hidden;
+}
+.descript div {
+	width: 334px;
+	float: left;
+	letter-spacing: 3.5px;
+	font-size: 22px;
+	*line-height: 30px;
+	*margin-top: 4px;
+	line-height: 30px\9;
+	margin-top: 4px\9;
+}
+.pc-bg2 {
+	display: block;
+	height: 389px;
+	width: 100%;
+}
+.descript img {
+	display: block;
+	float: right;
+	width: 100px;
+}
+.p12 {
+	display: block;
+	margin-top: 12.5%;
+	margin-left: 7%;
+}
+.D-btn {
+	position: relative;
+	float: left;
+	display: block;
+	width: 207px;
+	height: 56px;
+	margin-top: 30px;
+}
+.android {
+	background-image: url(https://img.kebuyer.com/img/offical/p13.png);
+	background-size: 100% 100%;
+	background-image: none\9;
+	*background-image: none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/p13.png',sizingMethod='scale');
+}
+.android:hover {
+	background-image: url(https://img.kebuyer.com/img/offical/p120.png);
+	background-size: 100% 100%;
+	background-image: none\9;
+	*background-image: none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/p120.png',sizingMethod='scale');
+}
+.ios {
+	background-image:url(https://img.kebuyer.com/img/offical/p14.png);
+	background-size: 100% 100%;
+	background-image: none\9;
+	*background-image: none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/p14.png',sizingMethod='scale');
+	margin-left: 20px;
+}
+.ios:hover {
+	background-image:url(https://img.kebuyer.com/img/offical/p121.png);
+	background-size: 100% 100%;
+	background-image: none\9;
+	*background-image: none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='img/p121.png',sizingMethod='scale');
+}
+.bgfb {
+	background: #f6f5f3;
+}
+.bgwhite {
+	background: #fff;
+}
+.p0,
+.p1,
+.p2,
+.p3,
+.p4,
+.p5,
+.p6 {
+	position: relative;
+	width: 100%;
+	height: 610px;
+}
+.sixt {
+	display: block;
+	margin: auto;
+	font-size: 68px;
+	width: 7em;
+	padding-top: 80px;
+}
+.sixt .title {
+	font-weight: bold;
+	color: #383735;
+	text-align: center;
+}
+.sixt .en-des {
+	font-size: 20px;
+	text-align: center;
+	margin-top: 20px;
+	font-weight: normal;
+	border-bottom: #f0dd99 solid 1px;
+	line-height: 50px;
+	color: #383637;
+}
+.ract-items {
+	width: 80px;
+	height: 5px;
+	background: #eac52c;
+	margin: auto
+}
+.sixitems {
+	overflow: hidden;
+	width: 711px;
+	margin: auto;
+	margin-top: 20px;
+}
+.sixitems li {
+	position: relative;
+	float: left;
+	width: 197px;
+	height: 81px;
+	margin: 0 20px;
+	margin-top: 30px;
+	cursor: pointer;
+}
+.parts1 {
+	background: url(https://img.kebuyer.com/img/offical/p17.png) no-repeat;
+}
+.parts2 {
+	background: url(https://img.kebuyer.com/img/offical/p18.png) no-repeat;
+}
+.parts3 {
+	background: url(https://img.kebuyer.com/img/offical/p111.png) no-repeat;
+	margin-right: 0;
+}
+.parts4 {
+	background: url(https://img.kebuyer.com/img/offical/p19.png) no-repeat;
+}
+.parts5 {
+	background: url(https://img.kebuyer.com/img/offical/p110.png) no-repeat;
+}
+.parts6 {
+	background: url(https://img.kebuyer.com/img/offical/p112.png) no-repeat;
+	margin-right: 0;
+}
+.parts1:hover {
+	background: url(https://img.kebuyer.com/img/offical/p113.png) no-repeat;
+}
+.parts2:hover {
+	background: url(https://img.kebuyer.com/img/offical/p114.png) no-repeat;
+}
+.parts3:hover {
+	background: url(https://img.kebuyer.com/img/offical/p117.png) no-repeat;
+}
+.parts4:hover {
+	background: url(https://img.kebuyer.com/img/offical/p115.png) no-repeat;
+}
+.parts5:hover {
+	background: url(https://img.kebuyer.com/img/offical/p116.png) no-repeat;
+}
+.parts6:hover {
+	background: url(https://img.kebuyer.com/img/offical/p118.png) no-repeat;
+}
+.content {
+	position: relative;
+	overflow: hidden;
+}
+.left {
+	float: left;
+}
+.right {
+	float: right;
+}
+.w-500 {
+	position: relative;
+	width: 468px;
+	margin-top: 251px;
+}
+.parts-title {
+	overflow: hidden;
+}
+.parts-title img {
+	float: left;
+	display: block;
+}
+.pt-items {
+	position: relative;
+	float: left;
+}
+.parts-title .color-items {
+	position: absolute;
+	left: 5px;
+	top: 3px;
+	width: 100%;
+	background: #eac62a;
+	height: 43px;
+}
+.parts-title .pt-des {
+	position: relative;
+	color: #303133;
+	font-size: 45px;
+	font-weight: bold;
+	margin-left: 10px;
+	z-index: 2;
+	line-height: 60px;
+}
+.par-des {
+	margin-top: 15px;
+	width: 384px;
+	float: right;
+	font-size: 15px;
+	color: #808080;
+}
+.rect-430410 {
+	position: relative;
+	width: 430px;
+	height: 395px;
+}
+.rect-430410 img {
+	position: absolute;
+	display: block;
+}
+.p21 {
+	width: 265px;
+	left: 65px;
+	top: 0;
+}
+.p22 {
+	width: 73px;
+	top: 32px;
+	left: 0;
+}
+.p23 {
+	width: 96px;
+	left: -14px;
+	top: 186px;
+}
+.p24 {
+	width: 34px;
+	left: 105px;
+	top: 178px;
+}
+.p25 {
+	right: 20px;
+	top: 0;
+	top: 38px;
+	width: 120px;
+}
+.p26 {
+	width: 228px;
+	top: 165px;
+	right: 72px;
+}
+.p27 {
+	right: 47px;
+	top: 261px;
+	width: 342px;
+}
+.p29 {
+	right: 0;
+	width: 180px;
+	top: 137px;
+}
+.p2-items {
+	position: absolute;
+	left: 50%;
+	top: 0;
+	margin-left: -60px;
+}
+.price-bq {
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: url(https://img.kebuyer.com/img/offical/p32.png) no-repeat;
+	background-size: 100% 100%;
+	width: 60px;
+	height: 30px;
+	text-align: center;
+	color: #fff;
+	line-height: 30px;
+}
+.price-bq.r1 {
+	left: -58px;
+	top: 40px;
+}
+.price-bq.r2 {
+	right: -52px;
+	top: 80px;
+	left: auto;
+	background: url(https://img.kebuyer.com/img/offical/p32fl.png) no-repeat;
+	background-size: 100% 100%;
+}
+.rect-430410 .p31 {
+	position: relative;
+	width: 120px;
+}
+.p33-items {
+	position: absolute;
+	left: 50%;
+	top: 194px;
+	margin-left: -175px;
+}
+.rect-430410 .p33 {
+	position: relative;
+	width: 380px;
+	display: block;
+}
+.price-bq.r3 {
+	left: 5px;
+	top: 80px;
+}
+.price-bq.r4 {
+	right: -18px;
+	top: 14px;
+	left: auto;
+	background: url(https://img.kebuyer.com/img/offical/p32fl.png) no-repeat;
+	background-size: 100% 100%;
+}
+.p41 {
+	width: 212px;
+	left: 0;
+	top: 0;
+}
+.p43 {
+	width: 200px;
+	left: 209px;
+	top: 11px;
+}
+.p42 {
+	width: 138px;
+	top: 127px;
+	left: 61px;
+}
+.p44 {
+	width: 58px;
+	right: 103px;
+	top: 192px;
+}
+.p45 {
+	right: 0;
+	width: 75px;
+	top: 134px;
+}
+.p51 {
+	width: 130px;
+	left: 50%;
+	top: 50%;
+	margin-left: -65px;
+	margin-top: -62px;
+}
+.p52 {
+	left: 40px;
+	top: 0;
+	width: 150px;
+}
+.p53 {
+	right: 40px;
+	top: 0;
+	width: 150px;
+}
+.p54 {
+	left: 0;
+	top: 50%;
+	width: 120px;
+	margin-top: -38px;
+}
+.p55 {
+	right: 0;
+	top: 50%;
+	width: 120px;
+	margin-top: -52px;
+}
+.p57 {
+	left: 40px;
+	bottom: 0;
+	width: 150px;
+}
+.p56 {
+	right: 40px;
+	bottom: 0;
+	width: 150px;
+}
+.earth {
+	position: relative;
+	width: 390px;
+	height: 390px;
+	margin-top: 104px;
+	margin-left: 38px;
+}
+.earth img {
+	position: absolute;
+}
+.p79 {
+	position: absolute;
+	width: 250px;
+	left: 70px;
+	top: 70px;
+}
+.p71 {
+	width: 72px;
+	left: 0;
+	top: 90px;
+}
+.p72 {
+	width: 50px;
+	left: 70px;
+	top: 80px;
+}
+.p73 {
+	width: 80px;
+	left: 148px;
+	z-index: 3;
+	top: 18px;
+}
+.p74 {
+	right: 121px;
+	width: 30px;
+	top: 30px;
+}
+.p75 {
+	right: 58px;
+	width: 60px;
+	top: 12px;
+}
+.p76 {
+	z-index: 2;
+	width: 90px;
+	left: 9px;
+	bottom: 100px;
+}
+.p77 {
+	width: 80px;
+	right: 17px;
+	top: 127px;
+	z-index: 2;
+}
+.p78 {
+	width: 184px;
+	left: 27%;
+	bottom: -11px;
+}
+.p7 {
+	position: relative;
+	overflow: hidden;
+}
+.bottom-des {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 344px;
+	line-height: 344px;
+	color: #333;
+	letter-spacing: 10px;
+	text-align: center;
+	font-size: 32px;
+	font-weight: bold;
+}
+.bottom {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 46px;
+	line-height: 46px;
+	color: #adafae;
+	text-align: center;
+	background: #383735;
+	font-size: 16px;
+	letter-spacing: 1px;
+}
+.rect-450430 {
+	position: relative;
+	width: 450px;
+	height: 430px;
+	margin-top: 90px;
+}
+.light {
+	width: 80px;
+	margin: auto 33px;
+}
+.h1 {
+	width: 100px;
+	margin: auto 23px;
+}
+.h1items {
+	margin-top: 10px;
+}
+.p64 {
+	position: relative;
+	float: right;
+	width: 50px;
+	margin-right: 68px;
+	margin-top: 15px;
+}
+.p66 {
+	width: 75px;
+	display: block;
+	margin-top: 26px;
+	margin-left: -6px;
+}
+.p67 {
+	width: 105px;
+	position: absolute;
+	right: -6px;
+	bottom: 64px;
+	z-index: 2;
+}
+.p611 {
+	position: absolute;
+	left: 117px;
+	width: 148px;
+	bottom: 88px;
+}
+.p612 {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+}
+.p63 {
+	width: 126px;
+	margin: auto 12px;
+}
+.p68 {
+	position: absolute;
+	right: 126px;
+	bottom: 64px;
+	z-index: 3;
+	width: 51px;
+}
+.p69 {
+	position: absolute;
+	left: 8px;
+	bottom: 16px;
+	z-index: 3;
+	width: 170px;
+}
+.gw-des {
+	display: block;
+	float: right;
+	margin-right: 84px;
+	height: 58px;
+	margin-top: 10px;
+}
+#cnzz_stat_icon_1261305827{
+	display: none;
+}
